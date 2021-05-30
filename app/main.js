@@ -138,7 +138,6 @@ const initMapEvents = () => {
         loadSingleView(ev.lngLat);        
     });
 };
-
 // Spinner
 
 const loadSingleView = async (lngLat) => {
