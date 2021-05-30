@@ -1,0 +1,54 @@
+footer{
+    position: absolute;
+    z-index: 4;        
+    background-color: transparent;        
+    bottom: 35px;
+    left: 50%;
+    transform: translate(-50%, 0);
+
+
+        
+        .my_position{
+        width: 260px;
+        border-style: none;
+        border-radius: 50px;
+        background-color:white;
+        color:rgb(0%,47.843137%,100%);
+        box-shadow: 0px 10px 3px -4px rgba(9, 43, 153, 0.288);
+        height:50px;            
+        display: flex;
+        justify-content: center;    
+        align-items: center;           
+        cursor: pointer;
+        
+        
+        p{
+            margin-bottom: 0;
+            padding-right:10px;
+            opacity: 90%;
+
+        }
+
+        svg{
+            width: 30px;
+            opacity: 70%;
+            
+        }
+    }
+    
+    .my_position:hover{
+        // background-color:rgba(255, 255, 255, 0.911);
+        font-weight: 600;                    
+               
+        p{
+            opacity: 100%;
+        }
+        
+        svg{
+            
+            opacity: 100%;
+            
+            
+        }
+    }
+}

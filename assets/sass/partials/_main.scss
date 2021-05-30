@@ -1,0 +1,33 @@
+main{
+      
+    
+    width: 100%;
+    position: relative;
+
+    
+.main {     
+    
+    
+    #mi_mapa_silvia, .mapboxgl-map{
+        height: 100vh;
+        width: 100%;
+        position: absolute;
+        z-index: 1;
+
+
+        .mapboxgl-canvas{
+            height: 100vh;
+
+            .mapboxgl-canvas{
+                height: 100vh;
+            }
+        }
+        .mapboxgl-ctrl-logo, .mapboxgl-ctrl{
+            display:none;
+        }
+    }
+   
+}
+}
+
+

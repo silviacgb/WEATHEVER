@@ -1,0 +1,36 @@
+@import 'lib/vars';
+@import 'lib/mixins';
+@import 'lib/reboot';
+@import 'lib/fontawesome/font-awesome';
+@import 'lib/fontface';
+@import 'lib/keyframes';
+@import 'partials/header';
+@import 'partials/main';
+@import 'partials/footer';
+@import 'partials/spinner';
+@import 'partials/details';
+
+
+
+
+
+
+// * {
+//     border: 1px solid red;
+// }
+
+
+html,
+body {
+
+    font-family: $corporate_font;
+    color: $body_color;
+    position: relative;
+
+ .app{
+     height: 100vh;
+ }
+    
+
+}
+

@@ -1,0 +1,7 @@
+.spinner{
+    visibility: hidden;
+
+    &.opened{
+        visibility: visible;
+    }
+}
