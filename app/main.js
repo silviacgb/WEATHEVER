@@ -87,14 +87,13 @@ const renderMapViewFooter = () => {
   });
 }
 
-
 const renderMap = () => {
     console.log(mapPosition.center);
     map = new mapboxgl.Map({
         container: 'mi_mapa_silvia',
         style: 'mapbox://styles/silviacgb/ckp3rkriu4nsy18ota6df7fi4',
-        center: [-3, 40],
-        zoom: 10,
+        center: mapPosition.center,
+        zoom: mapPosition.zoom,
     });
     console.log(map.center);
 };
