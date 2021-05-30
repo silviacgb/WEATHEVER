@@ -93,12 +93,11 @@ const renderMap = () => {
     map = new mapboxgl.Map({
         container: 'mi_mapa_silvia',
         style: 'mapbox://styles/silviacgb/ckp3rkriu4nsy18ota6df7fi4',
-        center: mapPosition.center,
-        zoom: mapPosition.zoom,
+        center: [-3, 40],
+        zoom: 10,
     });
     console.log(map.center);
 };
-
 
 
 
@@ -249,7 +248,7 @@ const saveMarker = () => {
     const storingObj =  {
         lat: weather.coord.lat,
         lng: weather.coord.lon,
-        zoom: mapPosition.zoom,
+        zoom: 11,
     };
 
     localStorage.setItem("map-info", JSON.stringify(storingObj));
