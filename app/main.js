@@ -14,7 +14,6 @@ let mapPosition;
 let view;
 let map;
 let weather;
-let marker;
 const modal = document.querySelector(".details");
 
 
@@ -33,8 +32,8 @@ const loadMapInfo = () => {
     const localStoragePosition = localStorage.getItem("map-info");
         if (localStoragePosition == null) { 
             mapPosition = {
-                center: [0,0], 
-                zoom: 11
+                center: [-3, 40], 
+                zoom: 11,
             };
         } else {
             mapPosition = JSON.parse(localStoragePosition);
@@ -96,6 +95,7 @@ const renderMap = () => {
         center: mapPosition.center,
         zoom: mapPosition.zoom,
     });
+    
     console.log(map.center);
 };
 
@@ -116,7 +116,7 @@ const flytoLocation = () => {
         
         map.flyTo({                    
             center: [lng, lat], 
-            zoom: 9  
+            zoom: 5  
        })
     });  
 }
@@ -229,8 +229,12 @@ const renderSingleViewModal = () => {
 
        const save = modal.querySelector('.save');
        save.addEventListener("click", () => {
-       saveMarker();     
+       saveMarker();  
+       modal.classList.remove("opened");   
+       loadMapView(); 
        });
+
+       
    
    
        const close = modal.querySelector(".close"); 
@@ -243,17 +247,9 @@ const renderSingleViewModal = () => {
 
 
 const saveMarker = () => {
-    markersPositions.push(weather);
-    localStorage.setItem("markers", JSON.stringify(markersPositions));
     
-    const storingObj =  {
-        lat: weather.coord.lat,
-        lng: weather.coord.lon,
-        zoom: 11,
-    };
-
-    localStorage.setItem("map-info", JSON.stringify(storingObj));
-    loadMapView();
+    markersPositions.push(weather);
+    localStorage.setItem("markers", JSON.stringify(markersPositions));  
     
 }
 
