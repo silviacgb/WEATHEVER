@@ -1,5 +1,5 @@
 import '../assets/sass/main.scss'
-import '/mapbox-gl/dist/mapbox-gl.css';
+import 'mapbox-gl/dist/mapbox-gl.css';
 import mapboxgl from 'mapbox-gl';
 mapboxgl.accessToken = 'pk.eyJ1Ijoic2lsdmlhY2diIiwiYSI6ImNrb2pwbGY1MzB4MzIycHJtZTZqOHQzZHQifQ.4OCtysgsx9_5mkZ6tu-QxQ';
 
