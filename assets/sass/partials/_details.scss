@@ -117,3 +117,134 @@
         transform: translate(-50%, 0);
     }
 }
+
+
+@media screen and (min-width: 992px) {
+    .details{
+
+        visibility: visible;
+        opacity: 0;
+        transform: translateY(100%);
+        transition: all 500ms ease;
+        width: 25%;
+        left: 0;
+        transform: translate(-50%);
+
+        .modal-details{
+           
+                background-color: rgba(255, 255, 255, 0.884);
+                border-radius: 0 0px 0px 0;
+                padding: 30px 30px 20px;
+                height: 90vh;
+
+                .details-content {
+                   
+                    display:flex;
+                    flex-direction: column;
+                    
+        
+                    .close {
+                       
+                        border-style: none;
+                        background-color: transparent;
+                        position: absolute;
+                        right:20px;
+                        top:20px;
+                       
+                                   
+                    }
+                    .close:hover{
+                        color: rgb(0, 123, 255);
+        
+                    }
+        
+                 
+        
+                    .content {
+                       
+                       
+                        display:flex; 
+                        flex-direction: column;               
+                        justify-content: center;
+                        align-items: center;
+                        height: 100%;
+                       
+                   
+                        
+                        h2 {
+                       
+                            font-size: 20px;
+                            margin:0;
+                            border-bottom: rgba(0, 0, 0, 0.20)  1px solid;  
+                            padding-bottom: 20px;  
+                            width: 100%;    
+                            text-align: center;     
+                                     
+                           
+                        }
+                    
+                        .all-data {
+                        flex-direction: column; 
+                        
+                        margin:0;                                         
+                            
+        
+                            .data {
+                                display: grid;
+                                grid-template-columns: 1fr 1fr;
+                                margin: 20px 0px;                                                           
+                                width: 100%;
+        
+                                svg {
+                                    width: 22px;
+                                    grid-column: 1;
+                                   
+                                
+                                }
+        
+                                p {
+                                    padding-left: 8px;
+                                    margin: 0;
+                                    grid-column: 2;
+                                    
+                                }
+                            }
+                        }
+                    }
+        
+                    .save {
+                        background-color: rgb(0, 123, 255);
+                        color: white;
+                        border-radius: 25px;
+                        border-style: none;                
+                        padding: 10px;
+                        margin-bottom: 25px;
+                   
+                        p {
+                            margin: 0;
+                        }
+                    }
+                    .save:hover{
+                        background-color: rgb(5, 102, 206);
+                    }
+                }
+
+            
+                
+        }
+
+        &.opened {
+            visibility: visible;
+            opacity: 1;
+            transform: translateY(0);
+            transition: all 500ms ease;
+            position: absolute;
+            z-index: 6;
+            bottom: 0;
+            left: 0;
+            transform: translate(0, 0);
+        }
+    }
+ 
+  
+}
