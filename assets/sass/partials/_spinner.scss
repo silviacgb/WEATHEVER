@@ -1,6 +1,15 @@
 .spinner{
     visibility: hidden;
-    color:blue;
+    color:tomato;
+    position: absolute;
+    z-index: 6;
+    font-size:30px;
+    left: 50%;
+    top:50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.822);
+    padding: 4px 10px;
+    border-radius: 40px;
 
     &.opened{
         visibility: visible;

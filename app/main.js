@@ -14,6 +14,7 @@ let mapPosition;
 let view;
 let map;
 let weather;
+let marker;
 const modal = document.querySelector(".details");
 
 
@@ -97,6 +98,7 @@ const renderMap = () => {
     });
     console.log(map.center);
 };
+
 
 
 
